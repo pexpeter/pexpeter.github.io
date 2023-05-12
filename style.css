@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(peter.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: blanchedalmond;
+  background: url(peter.png);
+  z-index: 9999;
+  padding: 10px 20px;
+}
+
+nav {
+  background-image: url(peter.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #0808081a;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+section {
+  padding: 40px;
+  background-color: rgb(221, 221, 230);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.project {
+  color: rgba(112, 109, 124, 0.774);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar-toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+}
+
+.navbar-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: #f2f2f2;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+  
+}
+
+.navbar-menu.active {
+  transform: translateX(0);
+}
+
+
+.navbar-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu ul li {
+  margin-bottom: 10px;
+  
+}
+
+.navbar-menu ul li a {
+  background-image: url(peter.png);
+  color: rgb(91, 14, 192);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  overflow-wrap: break-word;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+footer {
+  /* background-image: url(peter.png); */
+  background-color: rgb(55, 175, 175);
+  color: cyan;
+  padding: 10px;
+  text-align: center;
+}
