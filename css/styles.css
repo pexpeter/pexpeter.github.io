@@ -11214,20 +11214,43 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
-
+/* Common styles */
 .blog-section .row {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  align-items: flex-start; /* Align articles to the left */
 }
 
 .blog-section .col-md-4 {
-  margin-bottom: 20px;
-  
+  margin-bottom: 20px !important; /* Add space below each article */
 }
+
 .blog-section p {
   color: burlywood;
   margin-bottom: 5rem;
 }
+
+/* Media query for desktop screens */
+@media (min-width: 992px) {
+  .blog-section .row {
+    flex-direction: row; /* Display articles in a row */
+    flex-wrap: wrap; /* Allow multiple rows */
+  }
+
+  .blog-section .col-md-4 {
+    margin-bottom: 20px; /* Add space below each article */
+    margin-right: 20px; /* Add space between articles */
+    flex-basis: calc(33.33% - 20px); /* Ensure three articles per row */
+  }
+
+  .blog-section .col-md-4:nth-child(3n) {
+    margin-right: 0; /* Remove right margin for every third article to maintain alignment */
+  }
+}
+
+
+
+
 .art1 {
   max-width: 100%;
   height: auto;
@@ -11252,6 +11275,4 @@ body {
   padding: 5px 10px; /* Adjust padding as needed */
   font-size: 7px; /* Adjust font size as needed */
   border-radius: 5px; /* Apply rounded corners */
-}
- 
 }
