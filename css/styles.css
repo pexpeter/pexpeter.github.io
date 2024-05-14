@@ -11248,9 +11248,6 @@ body {
   }
 }
 
-
-
-
 .art1 {
   max-width: 100%;
   height: auto;
@@ -11275,4 +11272,14 @@ body {
   padding: 5px 10px; /* Adjust padding as needed */
   font-size: 7px; /* Adjust font size as needed */
   border-radius: 5px; /* Apply rounded corners */
+}
+.heading {
+  text-align: left;
+  color: whitesmoke;
+}
+
+.subtitle {
+  text-align: left;
+  color: #fff;
+  margin-bottom: 20px;
 }
