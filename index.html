@@ -1,226 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Peter Kamau</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Peter Kamau</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
-                    </ul>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Peter Kamau</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Cyberpunk Premium Styles -->
+    <link href="css/cyberpunk.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">Peter Kamau</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                    <li class="nav-item">
+                        <button class="nav-link theme-toggle" id="themeToggle" onclick="toggleTheme()"
+                            aria-label="Toggle theme">
+                            <i class="fas fa-sun" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase gradient-text">Peter Kamau</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">
+                        <span class="typing-container" style="color: var(--cyber-cyan); font-weight: 700;">Data
+                            Scientist</span>
+                        <br>
+                        A statistician and data analyst utilizing Excel, SQL,
+                        MongoDB, Tableau and Power Bi to give business an advantage of knowing their customers, trends
+                        and their forecasting.
+                    </h2>
+                    <a class="btn btn-primary cyber-btn" href="#about">Get to Know Me</a>
                 </div>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Peter Kamau</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">A statistician and data analyst utilizing Excel, SQL, MongoDB, Tableau and Power Bi to give business an advantage of knowing their customers, trends and their forecasting.</h2>
-                        <a class="btn btn-primary" href="#about">Get to Know Me</a>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="20" data-suffix="+">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3" data-suffix="+">0</div>
+                        <div class="stat-label">Years Exp</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15" data-suffix="+">0</div>
+                        <div class="stat-label">Algorithms</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100" data-suffix="%">0</div>
+                        <div class="stat-label">Commitment</div>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- About-->
-        <section class="about-section text-center" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Qualifications</h2>
-                        <p class="text-white-50">
-                            Graduated in Taita Taveta University, a university based in Kenya with a Degree in Bachelor of Science 
-                            in Statistics. I am equiped in statistical tests, data collection using Survey platforms, data analysis and report building and presentation.
-                        </p>
-                        <h2 class="text-white mb-4">Certifications</h2>
-                        <h3 class="heading">Business Analytics - UdaCity</h3>
-                        <p class="subtitle"> Tools:  Excel, SQL and Tableau<br/>
-                            <!-- <strong>Business Metrics:</strong> Business flow and Marketing funnel. Key performance indicators (KPIs) included Cost per Click, Cost per Lead, Customer Acquisition Cost, and Customer Lifetime Value.<br/>
-                            <br/><strong>Sales Metrics:</strong> Sales funnel and its KPIs, which included Total Bookings, Average Deal Size, and Average Time to Close.<br/><br/>
-                            <strong>Growth Metrics</strong>Business growth such as Engagement metrics, Stickiness, and Churn rates.<br/><br/>
-                            <strong>Finance Metrics</strong> Model finance data, emphasizing Gross Margin, COGS, Revenue, Operating Expenses, and the P/L statement.<br/><br/>
-                            <strong>SQL</strong> SQL concepts covered included Joins, Aggregations, Subqueries, Temporary Tables, Window functions, and Data cleaning. Both SQL and PostgreSQL were used in the projects.<br/><br/>
-                            <strong>Tableau</strong> Tableau was used for visualizing various metrics, introducing basics of Calculated columns.<br/><br/> -->
-                        </p>
-                        <h3 class="heading"> Applied Data Science - WorldQuant University</h3>
-                        <p class="subtitle"> Tools:  Python, Excel, SQL, ML (Scikit Learn, Pandas, Matplotlib, Plotly, Jupyter Notebooks, Jupyter Dash) and MongoDB, API's(FAST and REST) <br/>
-                        <h3 class="heading"> AWS Machine Learning Foundations</h3>
-                        <p class="subtitle"> Tools: AWS SageMaker, AWS, OOP</p>
-                    </div>
-                </div>
-                <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
+
+            <!-- Skills Bars Removed -->
+        </div>
+    </section>
+    <!-- About-->
+    <section class="about-section" id="about">
+        <div class="container px-4 px-lg-5">
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <h2 style="color: #fff; font-weight: 700; font-size: 2.5rem;">About Me</h2>
+                <p style="color: rgba(255,255,255,0.6); max-width: 600px; margin: 1rem auto;">
+                    Passionate about transforming data into actionable insights
+                </p>
             </div>
-        </section>
-        <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
-            <div class="container px-4 px-lg-5">
-                <!-- Featured Project Row-->
-                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/line.png" alt="..." /></div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>Shoreline</h4>
-                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project One Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/pie.png" alt="..." /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Misty</h4>
-                                    <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+
+            <!-- Education Card -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="card"
+                        style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 1rem; overflow: hidden;">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div
+                                    style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(99, 102, 241, 0.3)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">
+                                    <i class="fas fa-graduation-cap fa-xl" style="color: #a855f7;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="color: #fff; margin: 0; font-weight: 600;">Bachelor of Science in
+                                        Statistics</h4>
+                                    <p style="color: rgba(255,255,255,0.5); margin: 0;">Taita Taveta University, Kenya
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Two Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/chart.png" alt="..." /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Mountains</h4>
-                                    <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well!</p>
-                                </div>
+                            <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">
+                                Equipped with expertise in statistical tests, data collection using survey platforms,
+                                data analysis, report building, and professional presentation skills.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.5rem 0.75rem;">Statistical
+                                    Analysis</span>
+                                <span class="badge"
+                                    style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.5rem 0.75rem;">Data
+                                    Collection</span>
+                                <span class="badge"
+                                    style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.5rem 0.75rem;">Report
+                                    Building</span>
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.5rem 0.75rem;">Research
+                                    Methods</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Resume-->
-        <section class="about-section text-center" id="resume">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Resume</h2>
-                        <p class="text-white-50">
-                            You can access my resume here <a class="mx-2" href="https://drive.google.com/file/d/1wdJmvfMiZs-ViVf5gG7HjoTsww3kYEhJ/view?usp=sharing"><i class="fab fa-google-drive"></i></a>
-                        </p>
-                    </div>
-                </div>
-                <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
-            </div>
-        </section>
-        <!-- Signup-->
-        <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Contact for enquiries or opportunities.</h2>
-                        <form class="form-signup" id="contactForm" action="https://formspree.io/f/mqkrnjnv" method="POST">
-                            <!-- Email address input -->
-                            <div class="row input-group-newsletter">
-                                <div class="col">
-                                    <label for="emailAddress">Your email:</label>
-                                    <input class="form-control" id="emailAddress" type="email" name="email" placeholder="Enter your email..." aria-label="Enter your email..." required>
-                                </div>
+
+            <!-- Certifications Header -->
+            <h3 class="text-center mb-4" style="color: #a855f7; font-weight: 600;">Certifications</h3>
+
+            <!-- Certification Cards -->
+            <div class="row justify-content-center">
+                <!-- Cert 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100"
+                        style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 1rem;">
+                        <div class="card-body p-4 text-center">
+                            <div
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(99, 102, 241, 0.2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                <i class="fas fa-chart-line fa-2x" style="color: #a855f7;"></i>
                             </div>
-                            <!-- Your message input -->
-                            <div class="row input-group-newsletter">
-                                <div class="col">
-                                    <label for="message">Your message:</label>
-                                    <textarea class="form-control" id="message" name="message" placeholder="Enter your message..." required></textarea>
-                                </div>
-                            </div>
-                            <!-- Submit button -->
-                            <div class="row input-group-newsletter">
-                                <div class="col">
-                                    <button class="btn btn-primary" type="submit">Send</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contact-->
-        <section class="contact-section bg-black">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Address</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">Nairobi, Kenya</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="mailto:peterkgathoni@gmail.com">peterkgathoni@gmail.com</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Phone</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">+254 (705) 258-604</div>
+                            <h5 style="color: #fff; font-weight: 600;">Business Analytics</h5>
+                            <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 1rem;">Udacity
+                                Nanodegree</p>
+                            <div class="d-flex flex-wrap justify-content-center gap-2">
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.4rem 0.6rem; font-size: 0.75rem;">Excel</span>
+                                <span class="badge"
+                                    style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.4rem 0.6rem; font-size: 0.75rem;">SQL</span>
+                                <span class="badge"
+                                    style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.4rem 0.6rem; font-size: 0.75rem;">Tableau</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="https://www.twitter.com/pexpeterr"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="https://www.medium.com/@peterkgathoni"><i class="fab fa-medium"></i></a>
-                    <a class="mx-2" href="https://www.github.com/pexpeter"><i class="fab fa-github"></i></a>
-                    <a class="mx-2" href="https://public.tableau.com/app/profile/pexpeter">
-                        <img src="https://cloud.githubusercontent.com/assets/1724406/14420001/cfc72600-ffc9-11e5-8743-9b94ce8af254.png" alt="Tableau" style="width: 24px; height: 24px;"></a>
-                    
+                <!-- Cert 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100"
+                        style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 1rem;">
+                        <div class="card-body p-4 text-center">
+                            <div
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                <i class="fas fa-brain fa-2x" style="color: #6366f1;"></i>
+                            </div>
+                            <h5 style="color: #fff; font-weight: 600;">Applied Data Science</h5>
+                            <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 1rem;">WorldQuant
+                                University</p>
+                            <div class="d-flex flex-wrap justify-content-center gap-2">
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.4rem 0.6rem; font-size: 0.75rem;">Python</span>
+                                <span class="badge"
+                                    style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.4rem 0.6rem; font-size: 0.75rem;">ML</span>
+                                <span class="badge"
+                                    style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.4rem 0.6rem; font-size: 0.75rem;">MongoDB</span>
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.4rem 0.6rem; font-size: 0.75rem;">FastAPI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cert 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100"
+                        style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 1rem;">
+                        <div class="card-body p-4 text-center">
+                            <div
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(168, 85, 247, 0.2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                <i class="fab fa-aws fa-2x" style="color: #ec4899;"></i>
+                            </div>
+                            <h5 style="color: #fff; font-weight: 600;">AWS ML Foundations</h5>
+                            <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 1rem;">Udacity +
+                                AWS</p>
+                            <div class="d-flex flex-wrap justify-content-center gap-2">
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.4rem 0.6rem; font-size: 0.75rem;">SageMaker</span>
+                                <span class="badge"
+                                    style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.4rem 0.6rem; font-size: 0.75rem;">AWS</span>
+                                <span class="badge"
+                                    style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.4rem 0.6rem; font-size: 0.75rem;">OOP</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Peter Kamau 2024</div></footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
-    </body>
+        </div>
+    </section>
+    <!-- Projects-->
+    <section class="projects-section" id="projects">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mb-3" style="color: #fff; font-weight: 700;">Featured Projects</h2>
+            <p class="text-center mb-5" style="color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto 3rem;">
+                Real-world data science projects from my GitHub portfolio
+            </p>
+            <!-- Project Cards Row 1 -->
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <!-- Project 1: Customer Segmentation -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0"
+                        style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2) !important; border-radius: 1rem; transition: all 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3"
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(99, 102, 241, 0.2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                <i class="fas fa-users-cog fa-2x" style="color: #a855f7;"></i>
+                            </div>
+                            <h4 class="card-title" style="color: #fff; font-weight: 600;">Customer Segmentation</h4>
+                            <p class="card-text" style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">
+                                KMeans clustering on US Survey Credit Data 2019 with interactive Jupyter Dash
+                                visualization.
+                            </p>
+                            <div class="mt-3 mb-3">
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.5rem 0.75rem; margin: 0.2rem;">Python</span>
+                                <span class="badge"
+                                    style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.5rem 0.75rem; margin: 0.2rem;">KMeans</span>
+                                <span class="badge"
+                                    style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.5rem 0.75rem; margin: 0.2rem;">Dash</span>
+                            </div>
+                            <a href="https://github.com/pexpeter/Customer-Segmentation" target="_blank"
+                                class="btn btn-sm"
+                                style="background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; border: none; padding: 0.5rem 1rem;">
+                                <i class="fab fa-github me-1"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: Sentiment Analysis Streamlit -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0"
+                        style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2) !important; border-radius: 1rem; transition: all 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3"
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                <i class="fas fa-comment-dots fa-2x" style="color: #6366f1;"></i>
+                            </div>
+                            <h4 class="card-title" style="color: #fff; font-weight: 600;">Sentiment Analysis App</h4>
+                            <p class="card-text" style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">
+                                Naive Bayes sentiment classifier deployed as a Streamlit app with Docker
+                                containerization.
+                            </p>
+                            <div class="mt-3 mb-3">
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.5rem 0.75rem; margin: 0.2rem;">Streamlit</span>
+                                <span class="badge"
+                                    style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.5rem 0.75rem; margin: 0.2rem;">NLP</span>
+                                <span class="badge"
+                                    style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.5rem 0.75rem; margin: 0.2rem;">Docker</span>
+                            </div>
+                            <a href="https://github.com/pexpeter/StreamlitAppSentimentAnalysis" target="_blank"
+                                class="btn btn-sm"
+                                style="background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; border: none; padding: 0.5rem 1rem;">
+                                <i class="fab fa-github me-1"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3: Animal Image Prediction -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0"
+                        style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2) !important; border-radius: 1rem; transition: all 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3"
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(168, 85, 247, 0.2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                <i class="fas fa-paw fa-2x" style="color: #ec4899;"></i>
+                            </div>
+                            <h4 class="card-title" style="color: #fff; font-weight: 600;">Animal Image Prediction</h4>
+                            <p class="card-text" style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">
+                                CNN model classifying 80 animal species with Flask web interface deployed on Vercel.
+                            </p>
+                            <div class="mt-3 mb-3">
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.5rem 0.75rem; margin: 0.2rem;">CNN</span>
+                                <span class="badge"
+                                    style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.5rem 0.75rem; margin: 0.2rem;">Flask</span>
+                                <span class="badge"
+                                    style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.5rem 0.75rem; margin: 0.2rem;">Vercel</span>
+                            </div>
+                            <a href="https://github.com/pexpeter/Animal-Image-Prediction-using-CNN-Model"
+                                target="_blank" class="btn btn-sm"
+                                style="background: linear-gradient(135deg, #ec4899, #a855f7); color: #fff; border: none; padding: 0.5rem 1rem;">
+                                <i class="fab fa-github me-1"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Cards Row 2 -->
+            <div class="row gx-4 gx-lg-5 justify-content-center mt-2">
+                <!-- Project 4: IT Salary EDA -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0"
+                        style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2) !important; border-radius: 1rem; transition: all 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3"
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                <i class="fas fa-euro-sign fa-2x" style="color: #a855f7;"></i>
+                            </div>
+                            <h4 class="card-title" style="color: #fff; font-weight: 600;">IT Salary Survey EDA</h4>
+                            <p class="card-text" style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">
+                                Exploratory data analysis of EU IT Salary Survey 2020 with comprehensive visualizations.
+                            </p>
+                            <div class="mt-3 mb-3">
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.5rem 0.75rem; margin: 0.2rem;">Python</span>
+                                <span class="badge"
+                                    style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.5rem 0.75rem; margin: 0.2rem;">Pandas</span>
+                                <span class="badge"
+                                    style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.5rem 0.75rem; margin: 0.2rem;">EDA</span>
+                            </div>
+                            <a href="https://github.com/pexpeter/IT-Salary-Survey-EU-2020-Exploratory-Data-Analysis"
+                                target="_blank" class="btn btn-sm"
+                                style="background: linear-gradient(135deg, #a855f7, #ec4899); color: #fff; border: none; padding: 0.5rem 1rem;">
+                                <i class="fab fa-github me-1"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5: IMDB Web Scraping -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0"
+                        style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2) !important; border-radius: 1rem; transition: all 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3"
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                <i class="fas fa-film fa-2x" style="color: #6366f1;"></i>
+                            </div>
+                            <h4 class="card-title" style="color: #fff; font-weight: 600;">IMDB Web Scraping</h4>
+                            <p class="card-text" style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">
+                                BeautifulSoup scraper for Top 250 feature films from the past five years.
+                            </p>
+                            <div class="mt-3 mb-3">
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.5rem 0.75rem; margin: 0.2rem;">BeautifulSoup</span>
+                                <span class="badge"
+                                    style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.5rem 0.75rem; margin: 0.2rem;">Requests</span>
+                                <span class="badge"
+                                    style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.5rem 0.75rem; margin: 0.2rem;">Scraping</span>
+                            </div>
+                            <a href="https://github.com/pexpeter/IMDB-Website-Scraping-Using-BeautifulSoup"
+                                target="_blank" class="btn btn-sm"
+                                style="background: linear-gradient(135deg, #6366f1, #ec4899); color: #fff; border: none; padding: 0.5rem 1rem;">
+                                <i class="fab fa-github me-1"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6: Tweets Sentiment -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0"
+                        style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2) !important; border-radius: 1rem; transition: all 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3"
+                                style="width: 70px; height: 70px; background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(99, 102, 241, 0.2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                <i class="fab fa-twitter fa-2x" style="color: #ec4899;"></i>
+                            </div>
+                            <h4 class="card-title" style="color: #fff; font-weight: 600;">Tweets Sentiment Analysis</h4>
+                            <p class="card-text" style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">
+                                NLP-based sentiment analysis of Twitter data using machine learning classification.
+                            </p>
+                            <div class="mt-3 mb-3">
+                                <span class="badge"
+                                    style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.5rem 0.75rem; margin: 0.2rem;">Python</span>
+                                <span class="badge"
+                                    style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.5rem 0.75rem; margin: 0.2rem;">NLTK</span>
+                                <span class="badge"
+                                    style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.5rem 0.75rem; margin: 0.2rem;">ML</span>
+                            </div>
+                            <a href="https://github.com/pexpeter/TweetsSentimentAnalysis" target="_blank"
+                                class="btn btn-sm"
+                                style="background: linear-gradient(135deg, #ec4899, #6366f1); color: #fff; border: none; padding: 0.5rem 1rem;">
+                                <i class="fab fa-github me-1"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- View All on GitHub Button -->
+            <div class="text-center mt-4">
+                <a href="https://github.com/pexpeter?tab=repositories" target="_blank"
+                    class="btn btn-outline-light btn-lg"
+                    style="border: 2px solid rgba(168, 85, 247, 0.5); color: #a855f7; padding: 0.75rem 2rem; border-radius: 50px; transition: all 0.3s ease;">
+                    <i class="fab fa-github me-2"></i> View All Repositories
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Resume-->
+    <section class="about-section text-center" id="resume">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-white mb-4">Resume</h2>
+                    <p class="text-white-50">
+                        You can access my resume here <a class="mx-2"
+                            href="https://drive.google.com/file/d/1wdJmvfMiZs-ViVf5gG7HjoTsww3kYEhJ/view?usp=sharing"><i
+                                class="fab fa-google-drive"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Signup-->
+    <section class="signup-section" id="signup">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                    <h2 class="text-white mb-5">Contact for enquiries or opportunities.</h2>
+                    <form class="form-signup" id="contactForm" action="https://formspree.io/f/mqkrnjnv" method="POST">
+                        <!-- Email address input -->
+                        <div class="row input-group-newsletter">
+                            <div class="col">
+                                <label for="emailAddress">Your email:</label>
+                                <input class="form-control" id="emailAddress" type="email" name="email"
+                                    placeholder="Enter your email..." aria-label="Enter your email..." required>
+                            </div>
+                        </div>
+                        <!-- Your message input -->
+                        <div class="row input-group-newsletter">
+                            <div class="col">
+                                <label for="message">Your message:</label>
+                                <textarea class="form-control" id="message" name="message"
+                                    placeholder="Enter your message..." required></textarea>
+                            </div>
+                        </div>
+                        <!-- Submit button -->
+                        <div class="row input-group-newsletter">
+                            <div class="col">
+                                <button class="btn btn-primary" type="submit">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact-->
+    <section class="contact-section bg-black">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Address</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">Nairobi, Kenya</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Email</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50"><a
+                                    href="mailto:peterkgathoni@gmail.com">peterkgathoni@gmail.com</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Phone</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">+254 (705) 258-604</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social d-flex justify-content-center">
+                <a class="mx-2" href="https://www.twitter.com/pexpeterr"><i class="fab fa-twitter"></i></a>
+                <a class="mx-2" href="https://www.medium.com/@peterkgathoni"><i class="fab fa-medium"></i></a>
+                <a class="mx-2" href="https://www.github.com/pexpeter"><i class="fab fa-github"></i></a>
+                <a class="mx-2" href="https://public.tableau.com/app/profile/pexpeter">
+                    <img src="https://cloud.githubusercontent.com/assets/1724406/14420001/cfc72600-ffc9-11e5-8743-9b94ce8af254.png"
+                        alt="Tableau" style="width: 24px; height: 24px;"></a>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+        <div class="container px-4 px-lg-5">Copyright &copy; Peter Kamau 2025</div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- Cyberpunk Premium Scripts -->
+    <script src="js/cyberpunk.js"></script>
+
+    <!-- Theme Toggle and Mobile Nav Fix -->
+    <style>
+        /* Mobile Navigation Fix */
+        @media (max-width: 991.98px) {
+            #navbarResponsive {
+                background: rgba(15, 15, 26, 0.98);
+                padding: 1rem;
+                border-radius: 0.75rem;
+                margin-top: 0.5rem;
+                border: 1px solid rgba(168, 85, 247, 0.2);
+            }
+
+            #navbarResponsive .nav-link {
+                color: rgba(255, 255, 255, 0.8) !important;
+                padding: 0.75rem 1rem !important;
+                border-radius: 0.5rem;
+                margin: 0.25rem 0;
+            }
+
+            /* Light Mode Mobile Nav */
+            body.light-mode #navbarResponsive {
+                background: rgba(255, 255, 255, 0.98) !important;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            body.light-mode #navbarResponsive .nav-link {
+                color: #0f172a !important;
+            }
+
+            body.light-mode #navbarResponsive .nav-link:hover {
+                color: #fbbf24 !important;
+                background: rgba(0, 0, 0, 0.05);
+            }
+
+            #navbarResponsive .nav-link:hover {
+                background: rgba(168, 85, 247, 0.2);
+                color: #a855f7 !important;
+            }
+
+            .navbar-toggler {
+                border: 1px solid rgba(168, 85, 247, 0.5) !important;
+                padding: 0.5rem 0.75rem;
+            }
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(168, 85, 247, 0.2);
+        }
+
+        .theme-toggle i {
+            font-size: 1.2rem;
+            color: #a855f7;
+        }
+
+        /* Light Mode Styles */
+        body.light-mode {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+        }
+
+        body.light-mode #mainNav {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+        }
+
+        body.light-mode #mainNav .navbar-brand {
+            background: linear-gradient(135deg, #a855f7, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        body.light-mode #mainNav .nav-link {
+            color: #475569 !important;
+        }
+
+        body.light-mode #mainNav .nav-link:hover {
+            color: #a855f7 !important;
+        }
+
+        body.light-mode .masthead {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 25%, #cbd5e1 50%, #94a3b8 75%, #64748b 100%);
+        }
+
+        body.light-mode .masthead h1 {
+            background: linear-gradient(135deg, #1e293b 0%, #a855f7 50%, #6366f1 100%);
+            -webkit-background-clip: text;
+        }
+
+        body.light-mode .masthead h2 {
+            color: rgba(30, 41, 59, 0.7);
+        }
+
+        body.light-mode .about-section,
+        body.light-mode .projects-section,
+        body.light-mode .signup-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+        }
+
+        body.light-mode .about-section h2,
+        body.light-mode .projects-section h2 {
+            color: #1e293b !important;
+        }
+
+        body.light-mode .about-section p,
+        body.light-mode .projects-section p {
+            color: #475569 !important;
+        }
+
+        body.light-mode .card {
+            background: rgba(255, 255, 255, 0.9) !important;
+            border: 1px solid rgba(168, 85, 247, 0.15) !important;
+        }
+
+        body.light-mode .card h4,
+        body.light-mode .card h5 {
+            color: #1e293b !important;
+        }
+
+        body.light-mode .card p {
+            color: #475569 !important;
+        }
+
+        body.light-mode .signup-section h2 {
+            color: #1e293b !important;
+        }
+
+        body.light-mode .signup-section .form-control {
+            background: rgba(255, 255, 255, 0.9);
+            color: #1e293b;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        body.light-mode .contact-section {
+            background: #f1f5f9;
+        }
+
+        body.light-mode .footer {
+            background: #e2e8f0 !important;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+        }
+
+        body.light-mode .footer .container {
+            color: #475569 !important;
+        }
+
+        body.light-mode #navbarResponsive {
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        body.light-mode .theme-toggle i {
+            color: #6366f1;
+        }
+    </style>
+
+    <script>
+        // Theme Toggle Function
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+
+            body.classList.toggle('light-mode');
+
+            if (body.classList.contains('light-mode')) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('themeIcon');
+
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+                if (themeIcon) {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
+            }
+        });
+    </script>
+</body>
+
 </html>

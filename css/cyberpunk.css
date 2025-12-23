@@ -1,0 +1,481 @@
+/* =========================================
+   ELEGANT DARK DATA PORTFOLIO STYLES
+   Matte Black + Gold + Deep Blue Theme
+   ========================================= */
+
+/* Elegant Color Variables */
+:root {
+    --cyber-dark: #0f172a;
+    /* Slate 900 */
+    --cyber-darker: #020617;
+    /* Slate 950 */
+    --cyber-card: rgba(30, 41, 59, 0.7);
+    /* Slate 800 with opacity */
+    --cyber-cyan: #fbbf24;
+    /* Amber 400 (Gold) - Replaces Cyan */
+    --cyber-cyan-glow: rgba(251, 191, 36, 0.2);
+    --cyber-magenta: #94a3b8;
+    /* Slate 400 (Silver/Grey) - Replaces Magenta */
+    --cyber-magenta-glow: rgba(148, 163, 184, 0.2);
+    --cyber-pink: #e2e8f0;
+    /* Slate 200 */
+    --cyber-blue: #3b82f6;
+    /* Blue 500 */
+    --cyber-purple: #64748b;
+    /* Slate 500 */
+    --text-primary: #f8fafc;
+    /* Slate 50 */
+    --text-secondary: #cbd5e1;
+    /* Slate 300 */
+    --cyber-gradient: linear-gradient(135deg, #fbbf24, #f59e0b);
+    --cyber-gradient-alt: linear-gradient(135deg, #1e293b, #0f172a);
+    --text-glow: none;
+    /* Removed Text Glow */
+    --box-glow-cyan: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Subtle Shadow */
+    --box-glow-magenta: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom Animated Cursor - Refined */
+body {
+    cursor: default;
+    /* Reverted to default for elegance */
+}
+
+.cursor-dot {
+    background: var(--cyber-cyan);
+    box-shadow: none;
+    width: 6px;
+    height: 6px;
+    opacity: 0.8;
+}
+
+.cursor-outline {
+    border: 1px solid var(--cyber-cyan);
+    box-shadow: none;
+    opacity: 0.5;
+}
+
+.cursor-outline.hover {
+    background: rgba(251, 191, 36, 0.05);
+    /* Very subtle gold tint */
+    border-color: var(--cyber-cyan);
+}
+
+/* Particles Container */
+#particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.05);
+    /* Faint white/grey text */
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    user-select: none;
+    animation: floatData 20s infinite linear;
+}
+
+@keyframes floatData {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.4;
+    }
+
+    90% {
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translateY(-20vh) rotate(10deg);
+        opacity: 0;
+    }
+}
+
+/* Elegant Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+    /* Gold Gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: none;
+    /* No shifting animation for elegance */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Typing Effect */
+.typing-container {
+    color: var(--cyber-cyan) !important;
+}
+
+.typing-text {
+    border-right: 2px solid var(--cyber-cyan);
+}
+
+/* Scroll Reveal Animations */
+.reveal,
+.reveal-left,
+.reveal-right {
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Smoother bezier */
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* 3D Card Tilt Effect - Subtle */
+.tilt-card {
+    transition: transform 0.4s ease-out;
+}
+
+.tilt-card:hover {
+    transform: translateY(-5px);
+    /* Just lift, less tilt */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.tilt-card::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+    /* Subtle shine */
+}
+
+/* Elegant Cards */
+.cyber-card {
+    background: rgba(30, 41, 59, 0.6);
+    /* Slate 800 */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Very thin border */
+    border-radius: 4px;
+    /* Slightly sharper corners */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cyber-card::before {
+    display: none;
+    /* Remove animated glowing border */
+}
+
+.cyber-card:hover {
+    border-color: rgba(251, 191, 36, 0.3);
+    /* Gold border on hover */
+    background: rgba(30, 41, 59, 0.8);
+}
+
+/* Skill Bars */
+.skill-bar-label span:last-child {
+    color: var(--cyber-cyan);
+}
+
+.skill-bar {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.skill-bar-fill {
+    background: linear-gradient(90deg, #fbbf24, #d97706);
+    /* Gold gradient */
+    box-shadow: none;
+    /* Remove glow */
+}
+
+.skill-bar-fill::after {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* Stats Counter */
+.stats-section {
+    background: var(--cyber-darker);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-number {
+    background: linear-gradient(135deg, #f8fafc, #94a3b8);
+    /* Silver/White text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Playfair Display', serif;
+    /* Optional: adds class */
+}
+
+.stat-label {
+    color: var(--cyber-cyan);
+    /* Gold labels */
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+/* Navigation - Matte Black */
+#mainNav.cyber-nav {
+    background: rgba(2, 6, 23, 0.95) !important;
+    /* Slate 950 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#mainNav.cyber-nav .navbar-brand {
+    background: none;
+    -webkit-text-fill-color: #f8fafc;
+    color: #f8fafc !important;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+#mainNav.cyber-nav .nav-link {
+    color: rgba(248, 250, 252, 0.7) !important;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+#mainNav.cyber-nav .nav-link::after {
+    background: var(--cyber-cyan);
+    height: 1px;
+    /* Thinner underline */
+    box-shadow: none;
+}
+
+#mainNav.cyber-nav .nav-link:hover {
+    color: var(--cyber-cyan) !important;
+    text-shadow: none;
+}
+
+/* Masthead - Deep & Clean */
+.masthead.cyber-masthead {
+    background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+}
+
+.masthead.cyber-masthead::before {
+    /* Subtle geometric overlay instead of glow pulses */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100px 100px;
+    animation: none;
+    opacity: 0.5;
+}
+
+.masthead.cyber-masthead::after {
+    display: none;
+}
+
+/* Sections */
+.about-section.cyber-section,
+.projects-section.cyber-section {
+    background: var(--cyber-dark);
+}
+
+.signup-section.cyber-section {
+    background: var(--cyber-darker);
+}
+
+.signup-section.cyber-section::before {
+    background: radial-gradient(circle at bottom, rgba(251, 191, 36, 0.05), transparent 60%);
+}
+
+/* Inputs */
+.cyber-input {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important;
+    border-radius: 2px;
+}
+
+.cyber-input:focus {
+    border-color: var(--cyber-cyan) !important;
+    box-shadow: none !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Buttons - Gold/Premium */
+.cyber-btn {
+    background: linear-gradient(135deg, #fbbf24, #d97706) !important;
+    /* Gold */
+    color: #020617 !important;
+    /* Dark text on gold */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    border-radius: 2px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.cyber-btn:hover::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.cyber-btn:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Badges */
+.cyber-badge,
+.cyber-badge-magenta,
+.cyber-badge-pink {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1 !important;
+    text-shadow: none;
+    font-weight: 400;
+}
+
+/* Social Links */
+.cyber-social a {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #cbd5e1;
+}
+
+.cyber-social a:hover {
+    background: var(--cyber-cyan);
+    color: var(--cyber-darker);
+    border-color: var(--cyber-cyan);
+    box-shadow: none;
+}
+
+/* Remove Scanlines */
+.scanlines::before {
+    display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991.98px) {
+    #navbarResponsive {
+        background: rgba(2, 6, 23, 0.98) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #navbarResponsive .nav-link:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Light Mode Overrides for Elegant Theme */
+/* Light Mode Overrides for Elegant Theme */
+body.light-mode {
+    --cyber-dark: #f1f5f9;
+    /* Slate 100 */
+    --cyber-darker: #ffffff;
+    /* White */
+    --cyber-card: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+}
+
+body.light-mode .masthead.cyber-masthead {
+    background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+}
+
+body.light-mode .masthead.cyber-masthead::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 23, 23, 0.05) 1px, transparent 1px);
+    opacity: 1;
+}
+
+/* Fix Particles in Light Mode */
+body.light-mode .particle {
+    color: rgba(15, 23, 42, 0.15);
+    /* Dark Slate text for particles */
+}
+
+/* Fix Hero Text in Light Mode */
+body.light-mode .masthead h2 {
+    color: #475569 !important;
+    /* Dark grey description */
+}
+
+body.light-mode .typing-container {
+    color: #d97706 !important;
+    /* Darker Gold for visibility */
+}
+
+/* Fix Stats & Skills in Light Mode */
+body.light-mode .stats-section {
+    background: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .stat-number {
+    background: linear-gradient(135deg, #0f172a, #334155);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .stat-label {
+    color: #d97706;
+    /* Dark Amber */
+}
+
+body.light-mode h3 {
+    /* "Technical Proficiency" header */
+    color: #0f172a !important;
+}
+
+body.light-mode .skill-bar-label span {
+    color: #334155 !important;
+    /* Dark Slate labels */
+}
+
+body.light-mode .skill-bar-label span:last-child {
+    color: #d97706 !important;
+    /* Dark Amber percent */
+}
+
+body.light-mode .skill-bar {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .cyber-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .cyber-input {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #0f172a !important;
+}
+
+body.light-mode .cyber-input::placeholder {
+    color: #94a3b8;
+}
+
+body.light-mode .cyber-btn {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #mainNav.cyber-nav {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode #mainNav.cyber-nav .navbar-brand {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a;
+}
+
+body.light-mode #mainNav.cyber-nav .nav-link {
+    color: #475569 !important;
+}
+
+body.light-mode #mainNav.cyber-nav .nav-link:hover {
+    color: #d97706 !important;
+}
