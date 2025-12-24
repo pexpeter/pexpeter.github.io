@@ -43,7 +43,8 @@
 }
 
 body.light-mode .text-muted-custom {
-    color: #64748b !important; /* Slate 500 */
+    color: #64748b !important;
+    /* Slate 500 */
 }
 
 /* Custom Animated Cursor - Refined */
@@ -175,6 +176,22 @@ body {
     border-radius: 4px;
     /* Slightly sharper corners */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Ensure stretched-link works */
+    cursor: pointer;
+    /* Feedback for clickable cards */
+}
+
+/* Light Mode Overrides for Blog */
+body.light-mode .gradient-text {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .section-heading {
+    color: #0f172a;
 }
 
 .cyber-card::before {

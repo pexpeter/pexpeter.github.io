@@ -35,18 +35,22 @@ layout: default
                             {{ content }}
                         </div>
 
-                        <div class="d-flex justify-content-center gap-3 flex-wrap mt-5">
+                        <div
+                            class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-5">
                             {% if page.github_url %}
-                            <a href="{{ page.github_url }}" target="_blank" class="btn btn-primary cyber-btn">
+                            <a href="{{ page.github_url }}" target="_blank"
+                                class="btn btn-primary cyber-btn w-100 w-md-auto">
                                 <i class="fab fa-github me-2"></i> View Code
                             </a>
                             {% endif %}
                             {% if page.demo_url %}
-                            <a href="{{ page.demo_url }}" target="_blank" class="btn btn-primary cyber-btn">
+                            <a href="{{ page.demo_url }}" target="_blank"
+                                class="btn btn-primary cyber-btn w-100 w-md-auto">
                                 <i class="fas fa-external-link-alt me-2"></i> Live Demo
                             </a>
                             {% endif %}
-                            <a href="/projects" class="btn btn-outline-light" style="border-radius: 50px;">
+                            <a href="/projects" class="btn btn-outline-light w-100 w-md-auto"
+                                style="border-radius: 50px;">
                                 <i class="fas fa-arrow-left me-2"></i> Back to Projects
                             </a>
                         </div>
