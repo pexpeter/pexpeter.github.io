@@ -12,9 +12,17 @@ permalink: /projects/
             Real-world data science projects from my GitHub portfolio
         </p>
 
-        <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div id="activeFilter" class="text-center mb-4 d-none">
+            <span class="text-white-50">Showing projects using: </span>
+            <span id="filterTag" class="badge"
+                style="background: rgba(168, 85, 247, 0.2); color: #a855f7; font-size: 1rem;"></span>
+            <button class="btn btn-sm btn-outline-light ms-3" onclick="clearFilter()" style="border-radius: 50px;">Clear
+                Filter</button>
+        </div>
+
+        <div class="row gx-4 gx-lg-5 justify-content-center" id="projectsContainer">
             {% for project in site.projects %}
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4 project-card" data-tags="{{ project.tech_stack | join: ',' }}">
                 <div class="card h-100 border-0"
                     style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2) !important; border-radius: 1rem; transition: all 0.3s ease;">
                     <div class="card-body text-center p-4">
@@ -52,3 +60,45 @@ permalink: /projects/
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const tag = urlParams.get('tag');
+
+        if (tag) {
+            filterProjects(tag);
+        }
+    });
+
+    function filterProjects(tag) {
+        const cards = document.querySelectorAll('.project-card');
+        const activeFilter = document.getElementById('activeFilter');
+        const filterTag = document.getElementById('filterTag');
+
+        activeFilter.classList.remove('d-none');
+        filterTag.textContent = tag;
+
+        cards.forEach(card => {
+            const tags = card.getAttribute('data-tags');
+            if (tags.includes(tag)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    function clearFilter() {
+        const cards = document.querySelectorAll('.project-card');
+        const activeFilter = document.getElementById('activeFilter');
+
+        activeFilter.classList.add('d-none');
+        cards.forEach(card => card.style.display = 'block');
+
+        // Update URL without reloading
+        const url = new URL(window.location);
+        url.searchParams.delete('tag');
+        window.history.pushState({}, '', url);
+    }
+</script>

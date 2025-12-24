@@ -56,6 +56,49 @@ permalink: /about/
             </div>
         </div>
 
+        <!-- Technical Proficiency -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <h3 class="text-center mb-4" style="color: #a855f7; font-weight: 600;">Technical Proficiency</h3>
+                <div class="card" style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 1rem;">
+                    <div class="card-body p-4 text-center">
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 1.5rem;">Click any skill to see related projects</p>
+                        
+                        <div class="mb-4">
+                            <h5 style="color: #fff; font-size: 1rem; margin-bottom: 1rem;">Languages & Tools</h5>
+                            <div class="d-flex flex-wrap justify-content-center gap-2">
+                                <a href="/projects/?tag=Python" class="badge text-decoration-none" style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.6rem 1rem; transition: all 0.2s;">Python</a>
+                                <a href="/projects/?tag=SQL" class="badge text-decoration-none" style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.6rem 1rem; transition: all 0.2s;">SQL</a>
+                                <a href="/projects/?tag=R" class="badge text-decoration-none" style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.6rem 1rem; transition: all 0.2s;">R</a>
+                                <a href="/projects/?tag=Excel" class="badge text-decoration-none" style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.6rem 1rem; transition: all 0.2s;">Excel</a>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 style="color: #fff; font-size: 1rem; margin-bottom: 1rem;">Data Science & ML</h5>
+                            <div class="d-flex flex-wrap justify-content-center gap-2">
+                                <a href="/projects/?tag=Pandas" class="badge text-decoration-none" style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.6rem 1rem; transition: all 0.2s;">Pandas</a>
+                                <a href="/projects/?tag=KMeans" class="badge text-decoration-none" style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.6rem 1rem; transition: all 0.2s;">KMeans</a>
+                                <a href="/projects/?tag=NLP" class="badge text-decoration-none" style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.6rem 1rem; transition: all 0.2s;">NLP</a>
+                                <a href="/projects/?tag=CNN" class="badge text-decoration-none" style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.6rem 1rem; transition: all 0.2s;">CNN</a>
+                                <a href="/projects/?tag=Scikit-Learn" class="badge text-decoration-none" style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.6rem 1rem; transition: all 0.2s;">Scikit-Learn</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 style="color: #fff; font-size: 1rem; margin-bottom: 1rem;">Deployment & Tools</h5>
+                            <div class="d-flex flex-wrap justify-content-center gap-2">
+                                <a href="/projects/?tag=Flask" class="badge text-decoration-none" style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.6rem 1rem; transition: all 0.2s;">Flask</a>
+                                <a href="/projects/?tag=Streamlit" class="badge text-decoration-none" style="background: rgba(99, 102, 241, 0.2); color: #6366f1; padding: 0.6rem 1rem; transition: all 0.2s;">Streamlit</a>
+                                <a href="/projects/?tag=Docker" class="badge text-decoration-none" style="background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.6rem 1rem; transition: all 0.2s;">Docker</a>
+                                <a href="/projects/?tag=Tableau" class="badge text-decoration-none" style="background: rgba(168, 85, 247, 0.2); color: #a855f7; padding: 0.6rem 1rem; transition: all 0.2s;">Tableau</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Certifications Header -->
         <h3 class="text-center mb-4" style="color: #a855f7; font-weight: 600;">Certifications</h3>
 
