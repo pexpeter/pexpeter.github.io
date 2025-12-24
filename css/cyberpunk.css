@@ -34,6 +34,16 @@
     --box-glow-cyan: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     /* Subtle Shadow */
     --box-glow-magenta: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --box-glow-magenta: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom Text Utilities */
+.text-muted-custom {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.light-mode .text-muted-custom {
+    color: #64748b !important; /* Slate 500 */
 }
 
 /* Custom Animated Cursor - Refined */
