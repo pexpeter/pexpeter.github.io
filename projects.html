@@ -41,10 +41,19 @@ permalink: /projects/
                                 tech }}</span>
                             {% endfor %}
                         </div>
-                        <a href="{{ project.url }}" class="btn btn-sm stretched-link"
-                            style="background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; border: none; padding: 0.5rem 1rem;">
-                            <i class="fas fa-info-circle me-1"></i> View Details
-                        </a>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="{{ project.url }}" class="btn btn-sm stretched-link"
+                                style="background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; border: none; padding: 0.5rem 1rem;">
+                                <i class="fas fa-info-circle me-1"></i> View Details
+                            </a>
+                            {% if project.github_url %}
+                            <a href="{{ project.github_url }}" target="_blank"
+                                class="btn btn-sm btn-outline-light position-relative"
+                                style="z-index: 2; padding: 0.5rem 1rem; border-radius: 4px;">
+                                <i class="fab fa-github me-1"></i> GitHub
+                            </a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
