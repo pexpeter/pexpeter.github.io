@@ -23,7 +23,7 @@ permalink: /projects/
         <div class="row gx-4 gx-lg-5 justify-content-center" id="projectsContainer">
             {% for project in site.projects %}
             <div class="col-lg-4 col-md-6 mb-4 project-card" data-tags="{{ project.tech_stack | join: ',' }}">
-                <div class="card h-100 border-0"
+                <div class="card h-100 border-0 position-relative"
                     style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2) !important; border-radius: 1rem; transition: all 0.3s ease;">
                     <div class="card-body text-center p-4">
                         <div class="mb-3"
