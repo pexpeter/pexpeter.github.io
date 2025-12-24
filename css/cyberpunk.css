@@ -200,9 +200,13 @@ body.light-mode .section-heading {
 }
 
 .cyber-card:hover {
-    border-color: rgba(251, 191, 36, 0.3);
     /* Gold border on hover */
     background: rgba(30, 41, 59, 0.8);
+}
+
+body.light-mode .card-title {
+    color: #0f172a !important;
+    /* Slate 900 */
 }
 
 /* Skill Bars */
