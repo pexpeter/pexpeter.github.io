@@ -1,1 +1,9 @@
-permalink: /:title/
+title: Peter Kamau
+description: Data Scientist Portfolio
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
