@@ -10,7 +10,7 @@ permalink: /resume/
         <h2 class="text-white mb-4">Resume</h2>
         
         <!-- PDF Preview -->
-        <div class="card p-2 mb-4" style="background: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 1rem; width: 100%; height: 800px;">
+        <div class="card p-2 mb-4" style="background: rgba(13, 40, 41, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(45, 212, 191, 0.2); border-radius: 1rem; width: 100%; min-height: 600px; height: 80vh; max-height: 900px;">
             <iframe src="https://drive.google.com/file/d/1wdJmvfMiZs-ViVf5gG7HjoTsww3kYEhJ/preview" width="100%" height="100%" style="border: none; border-radius: 0.5rem;" allow="autoplay"></iframe>
         </div>
 

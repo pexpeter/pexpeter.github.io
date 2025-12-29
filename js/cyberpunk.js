@@ -206,6 +206,7 @@ function initStatsCounter() {
 
 function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-target'));
+    const suffix = element.getAttribute('data-suffix') || '';
     const duration = 2000;
     const step = target / (duration / 16);
     let current = 0;
@@ -216,7 +217,7 @@ function animateCounter(element) {
             current = target;
             clearInterval(timer);
         }
-        element.textContent = Math.round(current);
+        element.textContent = Math.round(current) + suffix;
     }, 16);
 }
 
@@ -284,20 +285,4 @@ function addCyberpunkClasses() {
     document.body.classList.add('scanlines');
 }
 
-/* Theme Toggle Enhancement for Cyberpunk */
-const originalToggleTheme = window.toggleTheme;
-window.toggleTheme = function () {
-    if (typeof originalToggleTheme === 'function') {
-        originalToggleTheme();
-    }
-
-    // Additional cyberpunk theme adjustments
-    const body = document.body;
-    if (body.classList.contains('light-mode')) {
-        document.documentElement.style.setProperty('--cyber-dark', '#f0f0f5');
-        document.documentElement.style.setProperty('--cyber-darker', '#e5e5ea');
-    } else {
-        document.documentElement.style.setProperty('--cyber-dark', '#0a0a0f');
-        document.documentElement.style.setProperty('--cyber-darker', '#050508');
-    }
-};
+/* Theme toggle is handled in default.html - removed duplicate to avoid conflicts */

@@ -15,24 +15,31 @@ permalink: /contact/
                     <!-- Email address input -->
                     <div class="row input-group-newsletter">
                         <div class="col">
-                            <label for="emailAddress">Your email:</label>
-                            <input class="form-control" id="emailAddress" type="email" name="email"
+                            <label for="emailAddress" style="color: rgba(255,255,255,0.8); display: block; margin-bottom: 0.5rem;">Your email:</label>
+                            <input class="form-control cyber-input" id="emailAddress" type="email" name="email"
                                 placeholder="Enter your email..." aria-label="Enter your email..." required>
                         </div>
                     </div>
                     <!-- Your message input -->
                     <div class="row input-group-newsletter">
                         <div class="col">
-                            <label for="message">Your message:</label>
-                            <textarea class="form-control" id="message" name="message"
+                            <label for="message" style="color: rgba(255,255,255,0.8); display: block; margin-bottom: 0.5rem;">Your message:</label>
+                            <textarea class="form-control cyber-input" id="message" name="message" rows="4"
                                 placeholder="Enter your message..." required></textarea>
                         </div>
                     </div>
                     <!-- Submit button -->
                     <div class="row input-group-newsletter">
                         <div class="col">
-                            <button class="btn btn-primary" type="submit">Send</button>
+                            <button class="btn btn-primary cyber-btn" type="submit">
+                                <span class="submit-text">Send Message</span>
+                                <span class="submit-loading" style="display: none;">Sending...</span>
+                            </button>
                         </div>
+                    </div>
+                    <!-- Feedback messages -->
+                    <div id="formFeedback" style="margin-top: 1rem; display: none;">
+                        <div class="alert" role="alert"></div>
                     </div>
                 </form>
             </div>

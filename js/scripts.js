@@ -51,4 +51,41 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Form submission feedback
+    initFormFeedback('contactForm', 'formFeedback');
+    initFormFeedback('contactFormBlog', 'formFeedbackBlog');
+
 });
+
+// Form submission with feedback
+function initFormFeedback(formId, feedbackId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const submitText = submitBtn.querySelector('.submit-text');
+        const submitLoading = submitBtn.querySelector('.submit-loading');
+        const feedback = document.getElementById(feedbackId);
+
+        // Show loading state
+        if (submitText && submitLoading) {
+            submitText.style.display = 'none';
+            submitLoading.style.display = 'inline';
+        }
+        submitBtn.disabled = true;
+
+        // The form will submit naturally, but we provide visual feedback
+        setTimeout(() => {
+            if (feedback) {
+                feedback.style.display = 'block';
+                const alert = feedback.querySelector('.alert');
+                alert.className = 'alert alert-info';
+                alert.style.background = 'rgba(45, 212, 191, 0.1)';
+                alert.style.border = '1px solid rgba(45, 212, 191, 0.3)';
+                alert.style.color = '#2dd4bf';
+                alert.textContent = 'Submitting your message...';
+            }
+        }, 100);
+    });
+}

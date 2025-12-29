@@ -3,38 +3,127 @@
    Matte Black + Gold + Deep Blue Theme
    ========================================= */
 
-/* Elegant Color Variables */
+/* Tiber Green Color Variables */
 :root {
-    --cyber-dark: #0f172a;
-    /* Slate 900 */
-    --cyber-darker: #020617;
-    /* Slate 950 */
-    --cyber-card: rgba(30, 41, 59, 0.7);
-    /* Slate 800 with opacity */
-    --cyber-cyan: #fbbf24;
-    /* Amber 400 (Gold) - Replaces Cyan */
-    --cyber-cyan-glow: rgba(251, 191, 36, 0.2);
-    --cyber-magenta: #94a3b8;
-    /* Slate 400 (Silver/Grey) - Replaces Magenta */
-    --cyber-magenta-glow: rgba(148, 163, 184, 0.2);
-    --cyber-pink: #e2e8f0;
-    /* Slate 200 */
-    --cyber-blue: #3b82f6;
-    /* Blue 500 */
-    --cyber-purple: #64748b;
-    /* Slate 500 */
-    --text-primary: #f8fafc;
-    /* Slate 50 */
-    --text-secondary: #cbd5e1;
-    /* Slate 300 */
-    --cyber-gradient: linear-gradient(135deg, #fbbf24, #f59e0b);
-    --cyber-gradient-alt: linear-gradient(135deg, #1e293b, #0f172a);
+    --cyber-dark: #0a1e1f;
+    /* Tiber Green Dark */
+    --cyber-darker: #051415;
+    /* Deeper Tiber */
+    --cyber-card: rgba(13, 40, 41, 0.7);
+    /* Tiber card with opacity */
+    --cyber-cyan: #2dd4bf;
+    /* Teal 400 - Primary Accent */
+    --cyber-cyan-glow: rgba(45, 212, 191, 0.2);
+    --cyber-magenta: #5eead4;
+    /* Teal 300 - Secondary Accent */
+    --cyber-magenta-glow: rgba(94, 234, 212, 0.2);
+    --cyber-pink: #99f6e4;
+    /* Teal 200 */
+    --cyber-blue: #14b8a6;
+    /* Teal 600 */
+    --cyber-purple: #0d9488;
+    /* Teal 700 */
+    --text-primary: #f0fdfa;
+    /* Teal 50 */
+    --text-secondary: #ccfbf1;
+    /* Teal 100 */
+    --cyber-gradient: linear-gradient(135deg, #2dd4bf, #14b8a6);
+    --cyber-gradient-alt: linear-gradient(135deg, #0d2829, #0a1e1f);
     --text-glow: none;
     /* Removed Text Glow */
     --box-glow-cyan: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     /* Subtle Shadow */
     --box-glow-magenta: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --box-glow-magenta: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom Cursor Styles */
+.cursor-dot {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--cyber-cyan);
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-outline {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--cyber-cyan);
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    transition: all 0.15s ease;
+}
+
+.cursor-outline.hover {
+    background: rgba(45, 212, 191, 0.05);
+    border-color: var(--cyber-cyan);
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Skill Bar Styles */
+.skill-bar-container {
+    margin-bottom: 1.5rem;
+}
+
+.skill-bar-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.skill-bar-label span {
+    color: var(--text-secondary);
+}
+
+.skill-bar-label span:last-child {
+    color: var(--cyber-cyan);
+    font-weight: 600;
+}
+
+.skill-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2dd4bf, #14b8a6);
+    border-radius: 4px;
+    width: 0;
+    transition: width 1s ease-out;
+    position: relative;
+}
+
+.skill-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 /* Custom Text Utilities */
@@ -87,8 +176,7 @@ body {
 
 .particle {
     position: absolute;
-    color: rgba(255, 255, 255, 0.05);
-    /* Faint white/grey text */
+    color: rgba(45, 212, 191, 0.1);
     font-size: 14px;
     font-family: 'Courier New', monospace;
     user-select: none;
@@ -117,13 +205,11 @@ body {
 
 /* Elegant Gradient Text */
 .gradient-text {
-    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
-    /* Gold Gradient */
+    background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: none;
-    /* No shifting animation for elegance */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -167,24 +253,19 @@ body {
 
 /* Elegant Cards */
 .cyber-card {
-    background: rgba(30, 41, 59, 0.6);
-    /* Slate 800 */
+    background: rgba(13, 40, 41, 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    /* Very thin border */
+    border: 1px solid rgba(45, 212, 191, 0.1);
     border-radius: 4px;
-    /* Slightly sharper corners */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     position: relative;
-    /* Ensure stretched-link works */
     cursor: pointer;
-    /* Feedback for clickable cards */
 }
 
 /* Light Mode Overrides for Blog */
 body.light-mode .gradient-text {
-    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -200,8 +281,8 @@ body.light-mode .section-heading {
 }
 
 .cyber-card:hover {
-    /* Gold border on hover */
-    background: rgba(30, 41, 59, 0.8);
+    background: rgba(13, 40, 41, 0.8);
+    border-color: rgba(45, 212, 191, 0.3);
 }
 
 body.light-mode .card-title {
@@ -218,12 +299,6 @@ body.light-mode .card-title {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.skill-bar-fill {
-    background: linear-gradient(90deg, #fbbf24, #d97706);
-    /* Gold gradient */
-    box-shadow: none;
-    /* Remove glow */
-}
 
 .skill-bar-fill::after {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
@@ -232,45 +307,41 @@ body.light-mode .card-title {
 /* Stats Counter */
 .stats-section {
     background: var(--cyber-darker);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(45, 212, 191, 0.1);
+    border-bottom: 1px solid rgba(45, 212, 191, 0.1);
 }
 
 .stat-number {
-    background: linear-gradient(135deg, #f8fafc, #94a3b8);
-    /* Silver/White text */
+    background: linear-gradient(135deg, #f0fdfa, #5eead4);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Playfair Display', serif;
-    /* Optional: adds class */
 }
 
 .stat-label {
     color: var(--cyber-cyan);
-    /* Gold labels */
     font-size: 0.85rem;
     letter-spacing: 3px;
     font-weight: 600;
 }
 
-/* Navigation - Matte Black */
+/* Navigation - Tiber Green */
 #mainNav.cyber-nav {
-    background: rgba(2, 6, 23, 0.95) !important;
-    /* Slate 950 */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(5, 20, 21, 0.95) !important;
+    border-bottom: 1px solid rgba(45, 212, 191, 0.1);
 }
 
 #mainNav.cyber-nav .navbar-brand {
     background: none;
-    -webkit-text-fill-color: #f8fafc;
-    color: #f8fafc !important;
+    -webkit-text-fill-color: #f0fdfa;
+    color: #f0fdfa !important;
     font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
 }
 
 #mainNav.cyber-nav .nav-link {
-    color: rgba(248, 250, 252, 0.7) !important;
+    color: rgba(240, 253, 250, 0.7) !important;
     font-weight: 300;
     letter-spacing: 1px;
 }
@@ -289,13 +360,12 @@ body.light-mode .card-title {
 
 /* Masthead - Deep & Clean */
 .masthead.cyber-masthead {
-    background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+    background: radial-gradient(circle at center, #0d2829 0%, #051415 100%);
 }
 
 .masthead.cyber-masthead::before {
-    /* Subtle geometric overlay instead of glow pulses */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(45, 212, 191, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45, 212, 191, 0.03) 1px, transparent 1px);
     background-size: 100px 100px;
     animation: none;
     opacity: 0.5;
@@ -316,34 +386,33 @@ body.light-mode .card-title {
 }
 
 .signup-section.cyber-section::before {
-    background: radial-gradient(circle at bottom, rgba(251, 191, 36, 0.05), transparent 60%);
+    background: radial-gradient(circle at bottom, rgba(45, 212, 191, 0.05), transparent 60%);
 }
 
 /* Inputs */
 .cyber-input {
     background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #f8fafc !important;
+    border: 1px solid rgba(45, 212, 191, 0.2) !important;
+    color: #f0fdfa !important;
     border-radius: 2px;
 }
 
 .cyber-input:focus {
     border-color: var(--cyber-cyan) !important;
-    box-shadow: none !important;
+    box-shadow: 0 0 0 0.2rem rgba(45, 212, 191, 0.25) !important;
     background: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* Buttons - Gold/Premium */
+/* Buttons - Teal Premium */
 .cyber-btn {
-    background: linear-gradient(135deg, #fbbf24, #d97706) !important;
-    /* Gold */
-    color: #020617 !important;
-    /* Dark text on gold */
+    background: linear-gradient(135deg, #2dd4bf, #14b8a6) !important;
+    color: #051415 !important;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.9rem;
     border-radius: 2px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
 }
 
 .cyber-btn:hover::before {
@@ -353,15 +422,16 @@ body.light-mode .card-title {
 .cyber-btn:hover {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
+    color: #051415 !important;
 }
 
 /* Badges */
 .cyber-badge,
 .cyber-badge-magenta,
 .cyber-badge-pink {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #cbd5e1 !important;
+    background: rgba(45, 212, 191, 0.1) !important;
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    color: #99f6e4 !important;
     text-shadow: none;
     font-weight: 400;
 }
@@ -369,8 +439,8 @@ body.light-mode .card-title {
 /* Social Links */
 .cyber-social a {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #cbd5e1;
+    border: 1px solid rgba(45, 212, 191, 0.3);
+    color: #ccfbf1;
 }
 
 .cyber-social a:hover {
@@ -388,12 +458,12 @@ body.light-mode .card-title {
 /* Mobile Responsive */
 @media (max-width: 991.98px) {
     #navbarResponsive {
-        background: rgba(2, 6, 23, 0.98) !important;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(5, 20, 21, 0.98) !important;
+        border: 1px solid rgba(45, 212, 191, 0.2);
     }
 
     #navbarResponsive .nav-link:hover {
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(45, 212, 191, 0.1);
     }
 }
 
@@ -421,8 +491,7 @@ body.light-mode .masthead.cyber-masthead::before {
 
 /* Fix Particles in Light Mode */
 body.light-mode .particle {
-    color: rgba(15, 23, 42, 0.15);
-    /* Dark Slate text for particles */
+    color: rgba(13, 148, 136, 0.15);
 }
 
 /* Fix Hero Text in Light Mode */
@@ -432,8 +501,7 @@ body.light-mode .masthead h2 {
 }
 
 body.light-mode .typing-container {
-    color: #d97706 !important;
-    /* Darker Gold for visibility */
+    color: #0d9488 !important;
 }
 
 /* Fix Stats & Skills in Light Mode */
@@ -451,8 +519,7 @@ body.light-mode .stat-number {
 }
 
 body.light-mode .stat-label {
-    color: #d97706;
-    /* Dark Amber */
+    color: #0d9488;
 }
 
 body.light-mode h3 {
@@ -466,12 +533,15 @@ body.light-mode .skill-bar-label span {
 }
 
 body.light-mode .skill-bar-label span:last-child {
-    color: #d97706 !important;
-    /* Dark Amber percent */
+    color: #0d9488 !important;
 }
 
 body.light-mode .skill-bar {
     background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .skill-bar-fill {
+    background: linear-gradient(90deg, #14b8a6, #0d9488);
 }
 
 body.light-mode .cyber-card {
@@ -509,5 +579,13 @@ body.light-mode #mainNav.cyber-nav .nav-link {
 }
 
 body.light-mode #mainNav.cyber-nav .nav-link:hover {
-    color: #d97706 !important;
+    color: #0d9488 !important;
+}
+
+body.light-mode .cyber-badge,
+body.light-mode .cyber-badge-magenta,
+body.light-mode .cyber-badge-pink {
+    background: rgba(13, 148, 136, 0.1) !important;
+    border: 1px solid rgba(13, 148, 136, 0.2);
+    color: #0d9488 !important;
 }

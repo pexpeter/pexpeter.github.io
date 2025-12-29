@@ -150,29 +150,34 @@ permalink: /blog/
                 <p style="color: rgba(255,255,255,0.6); margin-bottom: 2rem;">
                     Have a project in mind or want to discuss data science opportunities? I'd love to hear from you.
                 </p>
-                <form class="form-signup" id="contactForm" action="https://formspree.io/f/mqkrnjnv" method="POST">
+                <form class="form-signup" id="contactFormBlog" action="https://formspree.io/f/mqkrnjnv" method="POST">
                     <!-- Email address input -->
                     <div class="row input-group-newsletter mb-3">
                         <div class="col">
-                            <input class="form-control" id="emailAddress" type="email" name="email"
+                            <input class="form-control cyber-input" id="emailAddressBlog" type="email" name="email"
                                 placeholder="Your email address" aria-label="Enter your email..." required>
                         </div>
                     </div>
                     <!-- Your message input -->
                     <div class="row input-group-newsletter mb-3">
                         <div class="col">
-                            <textarea class="form-control" id="message" name="message" placeholder="Your message..."
+                            <textarea class="form-control cyber-input" id="messageBlog" name="message" placeholder="Your message..."
                                 rows="4" required></textarea>
                         </div>
                     </div>
                     <!-- Submit button -->
                     <div class="row input-group-newsletter">
                         <div class="col">
-                            <button class="btn btn-primary" type="submit"
-                                style="background: linear-gradient(135deg, #a855f7, #6366f1); border: none; padding: 1rem 3rem;">
-                                <i class="fas fa-paper-plane me-2"></i> Send Message
+                            <button class="btn btn-primary cyber-btn" type="submit">
+                                <i class="fas fa-paper-plane me-2"></i>
+                                <span class="submit-text">Send Message</span>
+                                <span class="submit-loading" style="display: none;">Sending...</span>
                             </button>
                         </div>
+                    </div>
+                    <!-- Feedback messages -->
+                    <div id="formFeedbackBlog" style="margin-top: 1rem; display: none;">
+                        <div class="alert" role="alert"></div>
                     </div>
                 </form>
                 <!-- Social links -->
